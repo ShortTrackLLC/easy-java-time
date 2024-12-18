@@ -4,7 +4,11 @@ Simple wrappers for handling instants and local datetimes in Clojure.
 
 # API Docs
 
-> _TODO_: Add link
+```
+cd /path/to/easy-java-time
+
+open docs/index.html
+```
 
 # REPL
 
