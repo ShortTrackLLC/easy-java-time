@@ -1,0 +1,8 @@
+.cpcache
+.DS_Store
+**.DS_Store
+.rebel_readline_history
+target
+**.\!*\!*
+*.swp
+*.swo

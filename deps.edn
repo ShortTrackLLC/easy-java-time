@@ -1,0 +1,25 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}}
+ :aliases
+ {:repl {:__usage__ "clojure -M:repl"
+         :extra-paths ["dev/script"
+                       "dev/src"
+                       "test"]
+         :extra-deps {cider/cider-nrepl {:mvn/version "0.28.5"}
+                      com.bhauman/rebel-readline #:mvn{:version "0.1.4"}
+                      com.taoensso/carmine {:mvn/version "3.3.2"}
+                      mvxcvi/puget {:mvn/version "1.3.4"}
+                      nrepl/nrepl {:mvn/version "1.0.0"}
+                      org.clojure/tools.namespace #:mvn{:version "1.2.0"}}
+         :main-opts ["-m" "repl"]}
+  :test {:__usage__ "clj -M:test"
+         :extra-deps {lambdaisland/kaocha {:mvn/version "1.91.1392"}}
+         :main-opts ["-m" "kaocha.runner"]}
+  :doc {:__usage__ "clojure -X:doc"
+        :extra-paths ["dev/resources"]
+        :extra-deps {codox/codox {:mvn/version "0.10.8"}}
+        :exec-fn codox.main/generate-docs
+        :exec-args {:source-paths ["src"]
+                    :output-path "docs"
+                    :metadata #:doc{:format :markdown}
+                    :themes [:st-codox-theme]}}}}
